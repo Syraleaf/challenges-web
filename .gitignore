@@ -1,0 +1,12 @@
+# Database Config
+db.php
+
+#editor files
+.vs/
+
+# Logs
+logs
+*.log
+
+# Mac files
+.DS_Store

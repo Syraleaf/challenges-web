@@ -101,7 +101,7 @@ $noteValue = 255 - strlen($set['note']);
 	<input type="hidden" name="id" value="<?php echo $id; ?>" />
 
 	<b><label for="name" style="font-size: 1.5vw;">Title Name: </label></b>
-	<input type="text" class="w3-input w3-animate-input w3-transparent w3-text-light-grey w3-center w3-margin-top" placeholder="Fill in the Name..." maxlength="15" name="name" id="name" value="<?php echo $set['name']; ?>" style="width: 30%; max-width: 40%; font-size: 1.25vw;" required />
+	<input type="text" class="w3-input w3-animate-input w3-transparent w3-text-light-grey w3-center w3-margin-top" placeholder="Fill in the Name..." maxlength="20" name="name" id="name" value="<?php echo $set['name']; ?>" style="width: 30%; max-width: 40%; font-size: 1.25vw;" required />
 	
 	<div style="margin-top: 5%;">
 	<b><label for="note" class="w3-text-light-grey" style="font-size: 2vw;">Title Description: </label></b><br />

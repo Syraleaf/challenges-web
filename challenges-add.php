@@ -30,7 +30,9 @@ if( isset($_POST['Send']) ) {
 		$res = mysqli_query($conn, $sql);
 
 if ($res) {
-	echo '<script>
+	
+	echo '
+	<script>
 	swal({
 	 title: "Successfully added!!",
 	text: "Challenge has been added without any problem!",
@@ -42,11 +44,9 @@ if ($res) {
 
 	echo "<meta http-equiv='refresh' content='2; url=challenges-add.php'>";
 
-   } else {
-    mysqli_error($conn);
-   }
+   } else mysqli_error($conn);
 
-	mysqli_close($conn);
+   mysqli_close($conn);
 }
 
 
@@ -94,7 +94,7 @@ mysqli_close($conn);
 	<label for="run">Runs: </label><br />
 	<select class="w3-select w3-transparent w3-text-light-grey w3-center" name="run" id="run">
 		<?php while($row = mysqli_fetch_array($res_r, MYSQLI_ASSOC)) {
-			echo "<option value=". $row['id_run'] .">". $row['name'] ."</option>";
+			echo "<option class='w3-text-black' value=". $row['id_run'] .">". $row['name'] ."</option>";
 		} ?>
 	</select>
 	</div>
@@ -103,7 +103,7 @@ mysqli_close($conn);
 	<label for="party">Parties: </label><br />
 	<select class="w3-select w3-transparent w3-text-light-grey w3-center" name="party" id="party">
 		<?php while($row = mysqli_fetch_array($res_p, MYSQLI_ASSOC)) {
-			echo "<option value=". $row['id_party'] .">". $row['name'] ."</option>";
+			echo "<option class='w3-text-black' value=". $row['id_party'] .">". $row['name'] ."</option>";
 		} ?>
 	</select>
 	</div>
@@ -112,7 +112,7 @@ mysqli_close($conn);
 	<label for="difficulty">Difficulties: </label><br />
 	<select class="w3-select w3-transparent w3-text-light-grey w3-center" name="difficulty" id="difficulty">
 		<?php while($row = mysqli_fetch_array($res_d, MYSQLI_ASSOC)) {
-			echo "<option value=". $row['id_difficulty'] .">". $row['name'] ."</option>";
+			echo "<option class='w3-text-black' value=". $row['id_difficulty'] .">". $row['name'] ."</option>";
 		} ?>
 	</select>
 	</div>
@@ -137,14 +137,14 @@ mysqli_close($conn);
 
 
   <div class="w3-row" style="margin-top: 5%;">
-	<div class="w3-col l2 w3-text-black" style="padding: 0 2%;">
+	<div class="w3-col l2 w3-text-light-grey" style="padding: 0 2%;">
 	<label for="exp">EXP Reward: </label><br />
-	<input type="number" class="w3-input w3-transparent w3-text-black w3-center" name="exp" id="exp" required />
+	<input type="number" class="w3-input w3-transparent w3-text-light-grey w3-center" name="exp" id="exp" required />
 	</div>
 
-	<div class="w3-col l2 w3-text-black" style="padding: 0 2%;">
+	<div class="w3-col l2 w3-text-light-grey" style="padding: 0 2%;">
 	<label for="money">Currency Reward: </label><br />
-	<input type="number" class="w3-input w3-transparent w3-text-black w3-center" name="money" id="money" required />
+	<input type="number" class="w3-input w3-transparent w3-text-light-grey w3-center" name="money" id="money" required />
 	</div>
 
 	<!-- Special Reward -> 3rd column for reward
